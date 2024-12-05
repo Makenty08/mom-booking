@@ -57,6 +57,7 @@ export function AuthPanel({ children, isLoginPage }: AuthProps) {
       linkPath={linkPath}
       linkText={linkText}
     >
+      <div>{isLoginPage ? 'Login' : 'Sign up'}</div>
       {children}
     </Panel>
   );

@@ -8,6 +8,7 @@ import authApi from '~/api/auth/api';
 import { FormProvider } from '~/components/hook-form/form-provider';
 import { LoadingButton } from '~/components/ui/loading-button';
 import { RHFTextField } from '~/components/hook-form/rhf-text-field';
+import { useRouter } from 'next/navigation';
 
 type FormValuesProps = {
   email: string;
@@ -32,7 +33,7 @@ interface RegistrationFormProps {
 export function RegistrationForm({ isClient }: RegistrationFormProps) {
   const [register] = authApi.endpoints.register.useMutation();
   const [registerOwner] = authApi.endpoints.ownerRegister.useMutation();
-
+  const router = useRouter();
   const methods = useForm<FormValuesProps>({
     resolver: yupResolver(RegisterSchema),
     defaultValues,
@@ -53,7 +54,11 @@ export function RegistrationForm({ isClient }: RegistrationFormProps) {
         const res = await registerOwner(data).unwrap();
         console.log(res);
       }
-    } catch (error: any) {
+    } catch (error) {
+      if (error.status == 500) {
+        router.push('/auth/login');
+      }
+
       // setError('email', { message: 'Email is not valid', type: 'custom' });
       // setError('password', { message: 'Wrong credentials', type: 'custom' });
     }
