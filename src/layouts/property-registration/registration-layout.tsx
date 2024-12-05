@@ -8,7 +8,7 @@ export function RegistrationLayout({ children }: { children: React.ReactNode }) 
   return (
     <div className="flex flex-col justify-between px-5 sm:px-10 md:px-14 lg:px-20 min-h-screen">
       <div className="flex items-center h-20">
-        <div className="text-2xl font-bold">Sanatopia</div>
+        <div className="text-2xl font-bold">MOM-Booking</div>
       </div>
 
       <div className="flex-1 flex items-center justify-center ">{children}</div>

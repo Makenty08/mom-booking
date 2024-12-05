@@ -7,7 +7,7 @@ export function Header() {
   return (
     <div className="grid grid-cols-3 h-20 justify-between gap-4 place-items-center">
       <Link href="/" className="text-2xl font-bold flex items-center justify-self-start">
-        Sanatopia
+        MOM-Booking
       </Link>
       <div className="flex gap-4 items-center justify-self-center">
         {/* {HEADER_ROUTES.map((item, index) => (

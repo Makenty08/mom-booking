@@ -42,7 +42,7 @@ export function AuthPanel({ children, isLoginPage }: AuthProps) {
   const welcomeMessage = (
     <>
       <div className="text-center text-xl font-semibold mb-1">Hi there, welcome to </div>
-      <div className="text-center text-3xl font-bold tracking-wider mb-4">Sanatopia</div>
+      <div className="text-center text-3xl font-bold tracking-wider mb-4">MOM-Booking</div>
       <div className="text-sm text-gray-400 mb-4">Book best hotel for you</div>
     </>
   );
@@ -71,7 +71,7 @@ export function AuthHostPanel({ children, isLoginPage }: AuthOwnerProps) {
   const welcomeMessage = (
     <>
       <div className="text-center text-lg font-bold mb-1">Welcome to</div>
-      <div className="text-center text-3xl font-bold tracking-wider mb-4">Sanatopia</div>
+      <div className="text-center text-3xl font-bold tracking-wider mb-4">MOM-Booking</div>
       <div className="text-sm text-gray-400 mb-4">Host your property</div>
 
       {/* <div className="border-t border-gray-200 mb-2" /> */}
