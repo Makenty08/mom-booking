@@ -54,8 +54,8 @@ export function RegistrationForm({ isClient }: RegistrationFormProps) {
         console.log(res);
       }
     } catch (error: any) {
-      setError('email', { message: 'Email is not valid', type: 'custom' });
-      setError('password', { message: 'Wrong credentials', type: 'custom' });
+      // setError('email', { message: 'Email is not valid', type: 'custom' });
+      // setError('password', { message: 'Wrong credentials', type: 'custom' });
     }
   };
   return (
