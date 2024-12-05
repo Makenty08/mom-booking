@@ -42,7 +42,7 @@ export function PropertyServices() {
           size={'lg'}
           onClick={() => setShowMore(!showMore)}
         >
-          Show all facilities
+          See more..
         </Button>
       </div>
     </div>
