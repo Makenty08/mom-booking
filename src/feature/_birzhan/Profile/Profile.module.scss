@@ -1,0 +1,22 @@
+.wrapperTooltip.wrapperTooltip {
+  background-color: transparent;
+  padding: 0;
+}
+
+.tooltip.tooltip {
+  background-color: #fff;
+  border-radius: 32px;
+}
+
+.mail {
+  color: #828792;
+}
+
+.hr {
+  background-color: #e9f0f3;
+}
+.item {
+  &:hover {
+    background-color: #f2f6f8;
+  }
+}
