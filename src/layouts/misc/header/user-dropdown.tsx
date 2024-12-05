@@ -39,7 +39,7 @@ export function UserDropDown() {
           {user ? (
             <>
               <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>BZ</AvatarFallback>
+              <AvatarFallback>{user.email ?? 'BZ'}</AvatarFallback>
             </>
           ) : (
             <>

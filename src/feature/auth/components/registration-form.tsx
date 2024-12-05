@@ -9,6 +9,7 @@ import { FormProvider } from '~/components/hook-form/form-provider';
 import { LoadingButton } from '~/components/ui/loading-button';
 import { RHFTextField } from '~/components/hook-form/rhf-text-field';
 import { useRouter } from 'next/navigation';
+import { toast } from '~/components/ui/use-toast';
 
 type FormValuesProps = {
   email: string;
@@ -55,12 +56,18 @@ export function RegistrationForm({ isClient }: RegistrationFormProps) {
         console.log(res);
       }
     } catch (error) {
+      //@ts-ignore
       if (error.status == 500) {
         router.push('/auth/login');
+        toast({
+          title: 'Successfully signed up',
+          description: 'Enter your credentials to log in',
+        });
+        return;
       }
 
-      // setError('email', { message: 'Email is not valid', type: 'custom' });
-      // setError('password', { message: 'Wrong credentials', type: 'custom' });
+      setError('email', { message: 'Email is not valid', type: 'custom' });
+      setError('password', { message: 'Wrong credentials', type: 'custom' });
     }
   };
   return (
