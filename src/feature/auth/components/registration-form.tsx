@@ -58,11 +58,11 @@ export function RegistrationForm({ isClient }: RegistrationFormProps) {
     } catch (error) {
       //@ts-ignore
       if (error.status == 500) {
-        router.push('/auth/login');
         toast({
           title: 'Successfully signed up',
           description: 'Enter your credentials to log in',
         });
+        router.push('/auth/login');
         return;
       }
 
